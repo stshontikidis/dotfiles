@@ -1,0 +1,1 @@
+/Users/stshontikidis/.dotfiles/vim/bundle/dracula/colors/dracula.vim
