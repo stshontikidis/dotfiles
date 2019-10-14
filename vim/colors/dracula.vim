@@ -1,1 +1,1 @@
-/Users/stshontikidis/.dotfiles/vim/bundle/dracula/colors/dracula.vim
+/Users/stshontikidis/.vim/pack/vendor/opt/dracula/colors/dracula.vim

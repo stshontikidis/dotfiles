@@ -1,3 +1,6 @@
-[submodule "vim/bundle/dracula"]
-	path = vim/bundle/dracula
+[submodule "vim/pack/opt/dracula"]
+	path = vim/pack/opt/dracula
 	url = https://github.com/dracula/vim.git
+[submodule "vim/pack/vendor/start/nerdtree"]
+	path = vim/pack/vendor/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
