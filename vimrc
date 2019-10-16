@@ -1,5 +1,5 @@
 set nocompatible
-
+set showcmd
 set termguicolors
 
 filetype plugin on
@@ -13,5 +13,8 @@ colorscheme dracula
 
 set rnu
 highlight LineNr ctermbg=darkgrey ctermfg=yellow
-highlight CursorLineNr ctermbg=darkgrey ctermfg=yellow
+highlight CursorLineNr ctermbg=black ctermfg=yellow
 highlight NonText ctermbg=darkgrey
+
+""set laststatus=2
+""set statusline=test
