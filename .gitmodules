@@ -4,3 +4,9 @@
 [submodule "vim/pack/vendor/opt/dracula"]
 	path = vim/pack/vendor/opt/dracula
 	url = https://github.com/dracula/vim.git
+[submodule "vim/pack/vendor/start/surround"]
+	path = vim/pack/vendor/start/surround
+	url = https://tpope.io/vim/surround.git
+[submodule "vim/pack/vendor/start/repeat"]
+	path = vim/pack/vendor/start/repeat
+	url = https://tpope.io/vim/repeat.git
