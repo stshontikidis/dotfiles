@@ -6,7 +6,7 @@ syntax on
 
 let g:dracula_colorterm = 0
 
-if $TERM ==? 'screen-256color'
+if ( $TERM ==? 'screen-256color' || $GDMSESSION !=? 'gnome' )
   let g:dracula_italic = 0
 endif
 
