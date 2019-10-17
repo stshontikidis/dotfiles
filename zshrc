@@ -97,33 +97,34 @@ source $ZSH/oh-my-zsh.sh
 
 
 # DE NVM - Start
+if [ -d "$HOME/de-sandbox" ]
+then
+	export DE_NVM_DIR="/Users/stshontikidis/de-sandbox/apps/de_nvm"
+	[ -s "${DE_NVM_DIR}/scripts/nvm.sh" ] && \. "${DE_NVM_DIR}/scripts/nvm.sh"
 
-export DE_NVM_DIR="/Users/stshontikidis/de-sandbox/apps/de_nvm"
-[ -s "${DE_NVM_DIR}/scripts/nvm.sh" ] && \. "${DE_NVM_DIR}/scripts/nvm.sh"
 
+	# place this after nvm initialization!
+	autoload -U add-zsh-hook
+	load-nvmrc() {
+	  local node_version="$(nvm version)"
+	  local nvmrc_path="$(nvm_find_nvmrc)"
 
-# place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
+	  if [ -n "$nvmrc_path" ]; then
+	    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
+	    if [ "$nvmrc_node_version" = "N/A" ]; then
+	      nvm install
+	    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+	      nvm use
+	    fi
+	  elif [ "$node_version" != "$(nvm version default)" ]; then
+	    echo "Reverting to nvm default version"
+	    nvm use default
+	  fi
+	}
+	add-zsh-hook chpwd load-nvmrc
+	load-nvmrc
+fi
 
 # DE NVM - End
 alias venv="source ~/venv/bin/activate"
@@ -131,7 +132,10 @@ alias venv="source ~/venv/bin/activate"
 #Attempt to disable venv prompt
 VIRTUAL_ENV_DISABLE_PROMPT='y'
 
-export PATH="/Users/stshontikidis/.pyenv/bin:$PATH"
+if [ -d "$HOME/.pyenv" ]
+then
+	export PATH="$HOME/.pyenv/bin:$PATH"
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+	eval "$(pyenv init -)"
+	eval "$(pyenv virtualenv-init -)"
+fi
