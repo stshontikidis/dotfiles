@@ -128,6 +128,7 @@ fi
 
 # DE NVM - End
 alias venv="source ~/venv/bin/activate"
+alias htbconn="cd ~/htb/vpn && openvpn 0lhad0.ovpn"
 
 #Attempt to disable venv prompt
 VIRTUAL_ENV_DISABLE_PROMPT='y'
