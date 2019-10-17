@@ -2,7 +2,7 @@
 export PATH="$HOME/bin:/usr/local/opt/python/libexec/bin:/usr/local/bin:$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/stshontikidis/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
