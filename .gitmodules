@@ -10,3 +10,6 @@
 [submodule "vim/pack/vendor/start/repeat"]
 	path = vim/pack/vendor/start/repeat
 	url = https://tpope.io/vim/repeat.git
+[submodule "vim/pack/vendor/opt/vim-airline"]
+	path = vim/pack/vendor/opt/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
