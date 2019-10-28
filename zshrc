@@ -127,8 +127,14 @@ then
 fi
 
 # DE NVM - End
+
+# Alias section
 alias venv="source ~/venv/bin/activate"
 alias htbconn="cd ~/htb/vpn && openvpn 0lhad0.ovpn"
+
+# env section
+export VISUAL="vim"
+export EDITOR="$VISUAL"
 
 #Attempt to disable venv prompt
 VIRTUAL_ENV_DISABLE_PROMPT='y'
