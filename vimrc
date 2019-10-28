@@ -1,7 +1,7 @@
 set nocompatible
 set showcmd
 set incsearch
-    set hlsearch
+set hlsearch
 
 filetype plugin indent on
 syntax on
