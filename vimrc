@@ -1,5 +1,6 @@
 set nocompatible
 set showcmd
+set incsearch
 
 filetype plugin indent on
 syntax on
