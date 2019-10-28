@@ -1,7 +1,7 @@
 set nocompatible
 set showcmd
 set incsearch
-set hlsearch
+    set hlsearch
 
 filetype plugin indent on
 syntax on
@@ -9,6 +9,10 @@ syntax on
 set autoindent
 set smarttab
 set wildmenu
+
+" All tabs are 4 and use spaces instead of tab
+set ts=4 sw=4 sts=4
+set et
 
 set scrolloff=2
 set sidescrolloff=5
@@ -34,6 +38,7 @@ colorscheme dracula
 
 set updatetime=500 "helps gitgutter update ever 1/2 second
 
+"Line Numbering and color scheme for gutter, numbers and unused buffer
 set nu rnu
 highlight LineNr ctermbg=darkgrey ctermfg=yellow
 highlight CursorLineNr ctermbg=black ctermfg=yellow
