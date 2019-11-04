@@ -3,13 +3,13 @@ export PATH="$HOME/bin:/usr/local/opt/python/libexec/bin:/usr/local/bin:$PATH:/A
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_CUSTOM="$HOME/.dotfiles/oh-my-zsh/custom"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="kayid"
 
+ZSH_CUSTOM="$HOME/.dotfiles/oh-my-zsh/custom"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
