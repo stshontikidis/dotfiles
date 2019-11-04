@@ -1,7 +1,11 @@
 set nocompatible
 set showcmd
+
+"Incremental highlight of search and highlight all
+"will allow to clear highlights with ctrl-l
 set incsearch
 set hlsearch
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 filetype plugin indent on
 syntax on
