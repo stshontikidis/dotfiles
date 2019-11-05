@@ -25,3 +25,6 @@
 [submodule "oh-my-zsh/custom/plugins/zsh-autosuggestions"]
 	path = oh-my-zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "vim/pack/vendor/start/vim-vinegar"]
+	path = vim/pack/vendor/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
