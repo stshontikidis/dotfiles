@@ -39,6 +39,7 @@ colorscheme dracula
 :packadd! gitgutter
 :packadd! fugitive
 :packadd! vim-airline
+:packadd! jedi-vim
 
 set updatetime=500 "helps gitgutter update ever 1/2 second
 
