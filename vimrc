@@ -49,3 +49,7 @@ highlight LineNr ctermbg=darkgrey ctermfg=yellow
 highlight CursorLineNr ctermbg=black ctermfg=yellow
 highlight NonText ctermbg=darkgrey
 
+augroup WrapLineTxtFile
+    autocmd!
+    autocmd FileType text setlocal wrap textwidth=80
+augroup END
