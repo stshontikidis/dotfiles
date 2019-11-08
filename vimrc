@@ -71,3 +71,8 @@ function! TrimWhitespace()
 endfunction
 
 autocmd BufWritePre *.py :call TrimWhitespace()
+
+augroup WrapLineTxtFile
+    autocmd!
+    autocmd FileType text setlocal wrap textwidth=80
+augroup END
