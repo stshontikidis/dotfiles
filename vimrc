@@ -43,18 +43,18 @@ colorscheme dracula
 :packadd! fugitive
 :packadd! vim-airline
 :packadd! jedi-vim
-:packadd! vim-pyenv
+":packadd! vim-pyenv
 
-if jedi#init_python()
-  function! s:jedi_auto_force_py_version() abort
-    let g:jedi#force_py_version = pyenv#python#get_internal_major_version()
-  endfunction
-  augroup vim-pyenv-custom-augroup
-    autocmd! *
-    autocmd User vim-pyenv-activate-post   call s:jedi_auto_force_py_version()
-    autocmd User vim-pyenv-deactivate-post call s:jedi_auto_force_py_version()
-  augroup END
-endif
+"if jedi#init_python()
+"  function! s:jedi_auto_force_py_version() abort
+"    let g:jedi#force_py_version = pyenv#python#get_internal_major_version()
+"  endfunction
+"  augroup vim-pyenv-custom-augroup
+"    autocmd! *
+"    autocmd User vim-pyenv-activate-post   call s:jedi_auto_force_py_version()
+"    autocmd User vim-pyenv-deactivate-post call s:jedi_auto_force_py_version()
+"  augroup END
+"endif
 
 set updatetime=500 "helps gitgutter update ever 1/2 second
 
