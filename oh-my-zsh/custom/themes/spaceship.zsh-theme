@@ -1,1 +1,1 @@
-/Users/stshontikidis/.dotfiles/oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme
+/Users/savatshontikidis/.dotfiles/oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme
