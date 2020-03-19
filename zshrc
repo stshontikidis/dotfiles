@@ -59,6 +59,8 @@ export EDITOR="$VISUAL"
 # Spaceship prompt settings
 export SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv exec_time line_sep char)
 export SPACESHIP_DIR_TRUNC=0
+export SPACESHIP_HOST_SHOW="always"
+export SPACESHIP_USER_SHOW="always"
 
 # Edit command in vim
 autoload edit-command-line; zle -N edit-command-line
