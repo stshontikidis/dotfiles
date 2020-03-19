@@ -58,8 +58,8 @@ export EDITOR="$VISUAL"
 
 # Spaceship prompt settings
 export SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv exec_time line_sep char)
-export SPACESHIP_DIR_TRUNC=0
-export SPACESHIP_HOST_SHOW="always"
+export SPACESHIP_DIR_TRUNC=4
+export SPACESHIP_DIR_TRUNC_PREFIX="../"
 export SPACESHIP_USER_SHOW="always"
 
 # Edit command in vim
