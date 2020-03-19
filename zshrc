@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH="$HOME/bin:/usr/local/opt/python/libexec/bin:/usr/local/bin:$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
+export NODE_EXTRA_CA_CERTS="/Users/savatshontikidis/sandbox/certs/bitwarden.crt"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
