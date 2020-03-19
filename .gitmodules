@@ -34,3 +34,6 @@
 [submodule "vim/pack/vendor/opt/vim-pyenv"]
 	path = vim/pack/vendor/opt/vim-pyenv
 	url = https://github.com/lambdalisue/vim-pyenv.git
+[submodule "oh-my-zsh/custom/themes/spaceship-prompt"]
+	path = oh-my-zsh/custom/themes/spaceship-prompt
+	url = https://github.com/denysdovhan/spaceship-prompt.git
