@@ -7,7 +7,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="kayid"
+ZSH_THEME="spaceship"
 
 ZSH_CUSTOM="$HOME/.dotfiles/oh-my-zsh/custom"
 plugins=(git zsh-syntax-highlighting)
@@ -55,6 +55,10 @@ alias htbconn="cd ~/htb/vpn && openvpn 0lhad0.ovpn"
 # env section
 export VISUAL="vim"
 export EDITOR="$VISUAL"
+
+# Spaceship prompt settings
+export SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv exec_time line_sep char)
+export SPACESHIP_DIR_TRUNC=0
 
 # Edit command in vim
 autoload edit-command-line; zle -N edit-command-line
