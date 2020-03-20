@@ -61,6 +61,7 @@ export SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv exec_time line_sep c
 export SPACESHIP_DIR_TRUNC=4
 export SPACESHIP_DIR_TRUNC_PREFIX="../"
 export SPACESHIP_USER_SHOW="always"
+export SPACESHIP_USER_COLOR=093
 
 # Edit command in vim
 autoload edit-command-line; zle -N edit-command-line
