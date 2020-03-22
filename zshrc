@@ -79,4 +79,4 @@ then
 fi
 
 # If you want to override anything add it to local_overrides
-[ -f "$HOME/.local_overrides" ] && source "$HOME/.local_overrides" 
+[ -f "$HOME/.local/zsh.overrides" ] && source "$HOME/.local/zsh.overrides" 
