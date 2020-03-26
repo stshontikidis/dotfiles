@@ -77,3 +77,6 @@ then
 	eval "$(pyenv init -)"
 	eval "$(pyenv virtualenv-init -)"
 fi
+
+# If you want to override anything add it to local_overrides
+[ -f "$HOME/.local/zsh.overrides" ] && source "$HOME/.local/zsh.overrides" 
