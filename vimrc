@@ -1,6 +1,6 @@
 set nocompatible
 set showcmd 
-
+    
 "Incremental highlight of search and highlight all
 "will allow to clear highlights with ctrl-l
 set incsearch
@@ -18,7 +18,12 @@ set wildmenu
 set tabstop=4 shiftwidth=4 softtabstop=4
 set expandtab
 
-set backspace=2 " Allow backspace in insert mode delete wrapped lines
+" add yaml stuffs
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
+" Allow backspace in insert mode delete wrapped lines
+set backspace=2 
 
 " Start scrolling screen when cursor is n lines away from top/bottom/side
 set scrolloff=2
