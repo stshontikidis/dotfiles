@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH="$HOME/bin:/usr/local/opt/python/libexec/bin:/usr/local/bin:$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-export NODE_EXTRA_CA_CERTS="/Users/savatshontikidis/sandbox/certs/bitwarden.crt"
+#
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
@@ -57,11 +57,12 @@ export VISUAL="vim"
 export EDITOR="$VISUAL"
 
 # Spaceship prompt settings
-export SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv exec_time line_sep char)
+export SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv exec_time line_sep vi_mode char)
 export SPACESHIP_DIR_TRUNC=4
 export SPACESHIP_DIR_TRUNC_PREFIX="../"
 export SPACESHIP_USER_SHOW="always"
 export SPACESHIP_USER_COLOR=093
+export SPACESHIP_VI_MODE_COLOR="yellow"
 
 # Edit command in vim
 autoload edit-command-line; zle -N edit-command-line
