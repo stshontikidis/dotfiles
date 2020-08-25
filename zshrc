@@ -66,7 +66,7 @@ export SPACESHIP_VI_MODE_COLOR="yellow"
 
 # Edit command in vim
 autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
+bindkey '^\' edit-command-line
 
 #Attempt to disable venv prompt
 VIRTUAL_ENV_DISABLE_PROMPT='y'
