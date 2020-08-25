@@ -40,3 +40,12 @@
 [submodule "vim/pack/vendor/start/ctrlp.vim"]
 	path = vim/pack/vendor/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux/plugins/nord-tmux"]
+	path = tmux/plugins/nord-tmux
+	url = https://github.com/arcticicestudio/nord-tmux.git
+[submodule "tmux/plugins/tmux"]
+	path = tmux/plugins/tmux
+	url = https://github.com/dracula/tmux.git
