@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-export PATH="$HOME/bin:/usr/local/opt/python/libexec/bin:/usr/local/bin:$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export GOPATH="$HOME/sandbox/go"
+export PATH="$HOME/bin:/usr/local/opt/python/libexec/bin:$GOPATH/bin:/usr/local/bin:$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 #
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -55,14 +56,15 @@ alias htbconn="cd ~/htb/vpn && openvpn 0lhad0.ovpn"
 # env section
 export VISUAL="vim"
 export EDITOR="$VISUAL"
+[ ! -z $(which docker) ] && export DOCKER_API_VERSION=$(docker version --format="{{.Client.APIVersion}}")
 
 # Spaceship prompt settings
-export SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv exec_time line_sep  char)
+export SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv golang exec_time line_sep  char)
 export SPACESHIP_DIR_TRUNC=4
 export SPACESHIP_DIR_TRUNC_PREFIX="../"
 export SPACESHIP_USER_SHOW="always"
 export SPACESHIP_USER_COLOR=093
-export SPACESHIP_VI_MODE_COLOR="yellow"
+export SPACESHIP_GOLANG_COLOR="yellow"
 
 # Edit command in vim
 autoload edit-command-line; zle -N edit-command-line
