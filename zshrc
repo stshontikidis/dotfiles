@@ -59,7 +59,7 @@ export EDITOR="$VISUAL"
 [ ! -z $(which docker) ] && export DOCKER_API_VERSION=$(docker version --format="{{.Client.APIVersion}}")
 
 # Spaceship prompt settings
-export SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv golang exec_time line_sep  char)
+export SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv golang docker node exec_time line_sep  char)
 export SPACESHIP_DIR_TRUNC=4
 export SPACESHIP_DIR_TRUNC_PREFIX="../"
 export SPACESHIP_USER_SHOW="always"
