@@ -48,6 +48,7 @@ colorscheme dracula
 :packadd! fugitive
 :packadd! vim-airline
 :packadd! jedi-vim
+:packadd! vim-go
 ":packadd! vim-pyenv
 
 "if jedi#init_python()
