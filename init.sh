@@ -63,6 +63,6 @@ ln -sf $HOME/.dotfiles/zshrc $HOME/.zshrc
 if [[ -d $HOME/.oh-my-zsh ]]; then
   echo "Oh-My-ZSH already installed"
 else
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --keep-zsh"
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --keep-zshrc"
 fi
 
