@@ -74,5 +74,10 @@ bindkey '^\' edit-command-line
 #Attempt to disable venv prompt
 VIRTUAL_ENV_DISABLE_PROMPT='y'
 
+# Pyenv stuff
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
 # If you want to override anything add it to local_overrides
-[ -f "$HOME/.local/zsh.overrides" ] && source "$HOME/.local/zsh.overrides" 
+[ -f "$HOME/.local/zsh.overrides" ] && source "$HOME/.local/zsh.overrides"
