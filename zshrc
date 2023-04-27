@@ -18,37 +18,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# DE NVM - Start
-if [ -d "$HOME/de-sandbox" ]
-then
-	export DE_NVM_DIR="/Users/stshontikidis/de-sandbox/apps/de_nvm"
-	[ -s "${DE_NVM_DIR}/scripts/nvm.sh" ] && \. "${DE_NVM_DIR}/scripts/nvm.sh"
-
-
-	# place this after nvm initialization!
-	autoload -U add-zsh-hook
-	load-nvmrc() {
-	  local node_version="$(nvm version)"
-	  local nvmrc_path="$(nvm_find_nvmrc)"
-
-	  if [ -n "$nvmrc_path" ]; then
-	    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-	    if [ "$nvmrc_node_version" = "N/A" ]; then
-	      nvm install
-	    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-	      nvm use
-	    fi
-	  elif [ "$node_version" != "$(nvm version default)" ]; then
-	    echo "Reverting to nvm default version"
-	    nvm use default
-	  fi
-	}
-	add-zsh-hook chpwd load-nvmrc
-	load-nvmrc
-fi
-
-# DE NVM - End
 
 # Alias section
 alias venv="source ~/venv/bin/activate"
@@ -75,9 +44,45 @@ bindkey '^\' edit-command-line
 VIRTUAL_ENV_DISABLE_PROMPT='y'
 
 # Pyenv stuff
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
 # If you want to override anything add it to local_overrides
 [ -f "$HOME/.local/zsh.overrides" ] && source "$HOME/.local/zsh.overrides"
+
+
+# DE NVM - Start
+
+# nvm does not work well when there's a symlink in this path: https://github.com/nvm-sh/nvm/issues/617
+export DE_NVM_DIR="$(cd "/Users/STshontikidis/de-sandbox/apps/de_nvm"; pwd -P)"
+[ -s "${DE_NVM_DIR}/scripts/nvm.sh" ] && \. "${DE_NVM_DIR}/scripts/nvm.sh"
+
+
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+
+# DE NVM - End
