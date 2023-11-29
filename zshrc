@@ -1,7 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export GOPATH="$HOME/sandbox/go"
 scripts="$HOME/.dotfiles/scripts"
-export PATH="$HOME/bin:/usr/local/opt/python/libexec/bin:$GOPATH/bin:$scripts:/usr/local/bin:$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# Docker on work laptop did not link so trying this for a bit
+docker_path="/Applications/Docker.app/Contents/Resources/bin/"
+export PATH="$HOME/bin:/usr/local/opt/python/libexec/bin:$GOPATH/bin:$scripts:/usr/local/bin:$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$docker_path"
 #
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
