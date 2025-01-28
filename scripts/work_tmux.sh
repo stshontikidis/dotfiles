@@ -9,10 +9,10 @@ tmux new-session -d -s $session
 
 tmux selectp -t 0
 tmux send "cd ~/de-sandbox && box up" C-m
-tmux splitw -v -p 42
+tmux splitw -v -l 42%
 
 tmux selectp -t 1
-tmux send "cd ~/de-sandbox/apps/edde && source venv/bin/activate" C-m
+tmux send "cd ~/de-sandbox/apps/edde && source .venv/bin/activate" C-m
 tmux splitw -h
 
 tmux selectp -t 2

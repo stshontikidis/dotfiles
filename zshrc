@@ -4,6 +4,14 @@ scripts="$HOME/.dotfiles/scripts"
 # Docker on work laptop did not link so trying this for a bit
 docker_path="/Applications/Docker.app/Contents/Resources/bin/"
 export PATH="$HOME/bin:/usr/local/opt/python/libexec/bin:$GOPATH/bin:$scripts:/usr/local/bin:$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$docker_path"
+
+export HOMEBREW_PREFIX="/opt/homebrew";
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+export HOMEBREW_REPOSITORY="/opt/homebrew";
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
+[ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}";
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
+
 #
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -46,8 +54,8 @@ bindkey '^\' edit-command-line
 VIRTUAL_ENV_DISABLE_PROMPT='y'
 
 # Pyenv stuff
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_ROOT="$(pyenv root)"
+export PATH="$PYENV_ROOT/shims:$PATH"
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"

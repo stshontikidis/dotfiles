@@ -52,3 +52,6 @@
 [submodule "vim/pack/vendor/opt/fugitive"]
 	path = vim/pack/vendor/opt/fugitive
 	url = https://tpope.io/vim/fugitive.git
+[submodule "fonts"]
+	path = fonts
+	url = git@github.com:powerline/fonts.git
